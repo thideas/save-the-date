@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --text: #f7f3ec;
+  --muted: rgba(247, 243, 236, 0.78);
+  --line: rgba(247, 243, 236, 0.45);
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #1a1a18;
+  color: var(--text);
+}
+
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  /*
+    ZDJĘCIE W TLE:
+    Możesz później podmienić ten adres na własne zdjęcie.
+  */
+  background-image:
+    url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2200&q=85");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(12, 14, 11, 0.38) 0%,
+      rgba(12, 14, 11, 0.48) 50%,
+      rgba(12, 14, 11, 0.62) 100%
+    );
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  width: min(92%, 760px);
+  padding: 56px 24px;
+  text-align: center;
+  animation: fadeIn 1.4s ease both;
+}
+
+.eyebrow {
+  margin-bottom: 24px;
+  font-size: 0.73rem;
+  font-weight: 500;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+h1 {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(4rem, 10vw, 8.8rem);
+  font-weight: 500;
+  line-height: 0.82;
+  letter-spacing: -0.035em;
+}
+
+.ampersand {
+  font-size: 0.58em;
+  font-style: italic;
+  font-weight: 400;
+  opacity: 0.88;
+}
+
+.date {
+  margin-top: 34px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.7rem, 3vw, 2.35rem);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+}
+
+.place {
+  margin-top: 8px;
+  font-size: 0.78rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.divider {
+  width: 72px;
+  height: 1px;
+  margin: 32px auto 26px;
+  background: var(--line);
+}
+
+.message {
+  max-width: 560px;
+  margin: 0 auto;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.25rem, 2.1vw, 1.55rem);
+  line-height: 1.5;
+  color: rgba(247, 243, 236, 0.92);
+}
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  max-width: 520px;
+  margin: 38px auto 0;
+}
+
+.countdown-item {
+  padding: 16px 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(3px);
+}
+
+.countdown-item span {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1;
+}
+
+.countdown-item small {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.63rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.footer-note {
+  margin-top: 28px;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(247, 243, 236, 0.7);
+}
+
+.scroll-indicator {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  z-index: 3;
+  width: 34px;
+  height: 54px;
+  transform: translateX(-50%);
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: 999px;
+  background: transparent;
+  pointer-events: none;
+}
+
+.scroll-indicator span {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: white;
+  transform: translateX(-50%);
+  animation: scrollDot 1.8s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollDot {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0);
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 24px);
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    background-attachment: scroll;
+  }
+
+  h1 {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .ampersand {
+    margin: -2px 0;
+  }
+
+  .countdown {
+    gap: 6px;
+  }
+
+  .countdown-item {
+    padding: 13px 4px;
+  }
+
+  .content {
+    padding-top: 42px;
+    padding-bottom: 74px;
+  }
+}
+
+@media (max-width: 430px) {
+  .eyebrow {
+    margin-bottom: 20px;
+  }
+
+  .date {
+    margin-top: 25px;
+  }
+
+  .message {
+    font-size: 1.2rem;
+  }
+}

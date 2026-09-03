@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Save the Date — Tomek & Oktawia" />
+  <title>Tomek & Oktawia — Save the Date</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="hero">
+    <div class="overlay"></div>
+
+    <div class="content">
+      <p class="eyebrow">SAVE THE DATE</p>
+
+      <h1>
+        <span>Tomek</span>
+        <span class="ampersand">&</span>
+        <span>Oktawia</span>
+      </h1>
+
+      <!-- ZMIEŃ TUTAJ DATĘ ŚLUBU -->
+      <p class="date">12 · 06 · 2027</p>
+
+      <!-- ZMIEŃ TUTAJ MIEJSCE -->
+      <p class="place">Warszawa</p>
+
+      <div class="divider"></div>
+
+      <p class="message">
+        Będzie nam ogromnie miło świętować ten dzień razem z Wami.
+        Więcej szczegółów już wkrótce.
+      </p>
+
+      <section class="countdown" aria-label="Odliczanie do ślubu">
+        <div class="countdown-item">
+          <span id="days">000</span>
+          <small>dni</small>
+        </div>
+        <div class="countdown-item">
+          <span id="hours">00</span>
+          <small>godz.</small>
+        </div>
+        <div class="countdown-item">
+          <span id="minutes">00</span>
+          <small>min.</small>
+        </div>
+        <div class="countdown-item">
+          <span id="seconds">00</span>
+          <small>sek.</small>
+        </div>
+      </section>
+
+      <p class="footer-note">Formalne zaproszenie wkrótce</p>
+    </div>
+
+    <button class="scroll-indicator" aria-label="Przewiń w dół">
+      <span></span>
+    </button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
