@@ -30,10 +30,6 @@ body {
   justify-content: center;
   overflow: hidden;
 
-  /*
-    ZDJĘCIE W TLE:
-    Możesz później podmienić ten adres na własne zdjęcie.
-  */
   background-image:
     url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2200&q=85");
   background-size: cover;

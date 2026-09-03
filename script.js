@@ -1,8 +1,8 @@
 /*
-  USTAW TUTAJ DATĘ I GODZINĘ ŚLUBU.
-  Format: RRRR-MM-DDTHH:MM:SS
+  Data ślubu: 21 sierpnia 2027.
+  Godzinę możesz zmienić poniżej, gdy będzie już ustalona.
 */
-const weddingDate = new Date("2027-06-12T15:00:00");
+const weddingDate = new Date("2027-08-21T15:00:00");
 
 const daysEl = document.getElementById("days");
 const hoursEl = document.getElementById("hours");
