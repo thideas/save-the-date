@@ -2,21 +2,66 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Save the Date — Tomek & Oktawia" />
-  <title>Oktawia & Tomek — Save the Date</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  />
+  <meta
+    name="description"
+    content="Save the Date — Tomek & Oktawia"
+  />
+  <title>Tomek & Oktawia — Save the Date</title>
 
- 
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #f8f6f2;
+    }
+
+    .canva-container {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      height: 100dvh;
+      overflow: hidden;
+    }
+
+    .canva-container iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    @media (max-width: 768px) {
+      .canva-container {
+        width: 100vw;
+        height: 100dvh;
+      }
+    }
+  </style>
 </head>
-<body>
 
-  <div style="position: relative; width: 100%; height: 0; padding-top: 54.9048%;
- padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
- border-radius: 8px; will-change: transform;">
-  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-    src="https://www.canva.com/design/DAHTUwJNfuM/LSjyx80hqiXsIvVWgAxoQA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-  </iframe>
-</div>
-  
+<body>
+  <main class="canva-container">
+    <iframe
+      src="https://www.canva.com/design/DAHTUwJNfuM/LSjyx80hqiXsIvVWgAxoQA/view?embed"
+      title="Tomek & Oktawia — Save the Date"
+      loading="eager"
+      allowfullscreen
+      allow="fullscreen"
+    ></iframe>
+  </main>
 </body>
 </html>
